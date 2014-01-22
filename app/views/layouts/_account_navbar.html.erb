@@ -1,0 +1,20 @@
+<div class="account-nav">
+	<div class="row">
+		<div class="large-5 columns">
+		</div>
+		<div class="large-7 columns">
+			<div class="search-container large-2 columns">
+				Search
+			</div>
+			<div class="signin large-5 columns">
+				<% if signed_in? %>
+					<%= link_to "My Account", current_user %>
+				<%= link_to "Settings", '#' %>
+				<%= link_to "Sign out", signout_path, method: "delete" %>
+			<% else %>
+				<%= link_to "Sign in", signin_path %>
+			<% end %>
+			</div>	
+		</div>
+	</div>
+</div><!--.account-nav ends-->
